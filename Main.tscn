@@ -1,0 +1,160 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Controller.cs" type="Script" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/MaskController.cs" type="Script" id=3]
+
+[node name="Main" type="Node" index="0"]
+
+[node name="Control" type="Control" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.49
+anchor_right = 0.0
+anchor_bottom = 0.54
+margin_left = -20.0
+margin_top = -314.0
+margin_right = 20.0
+margin_bottom = -304.0
+rect_pivot_offset = Vector2( 20, 20 )
+rect_clip_content = false
+focus_mode = 1
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Rect" ]
+
+[node name="ColorRect" type="ColorRect" parent="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -16.0
+margin_top = -16.0
+margin_right = 57.0
+margin_bottom = 56.0
+grow_horizontal = 0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 0.176784 )
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "Visibility" ]
+
+[node name="Participants" type="Node2D" parent="." index="1"]
+
+position = Vector2( 208.773, 228.815 )
+
+[node name="Alex" parent="Participants" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 192.181, 209.937 )
+collision_layer = 0
+collision_mask = 0
+speed = 500
+inControl = false
+
+[node name="Label" type="Label" parent="Participants/Alex" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -14.0
+margin_top = 32.0
+margin_right = 26.0
+margin_bottom = 46.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Alex"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Bob" parent="Participants" index="1" instance=ExtResource( 2 )]
+
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 190.174, 296.686 )
+collision_layer = 0
+collision_mask = 0
+speed = 500
+inControl = false
+
+[node name="Label2" type="Label" parent="Participants/Bob" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -13.0
+margin_top = 34.0
+margin_right = 27.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Bob"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Carl" parent="Participants" index="2" instance=ExtResource( 2 )]
+
+modulate = Color( 1, 0, 0.984375, 1 )
+position = Vector2( 202.885, 129.027 )
+collision_layer = 0
+collision_mask = 0
+speed = 500
+inControl = false
+
+[node name="Label3" type="Label" parent="Participants/Carl" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -9.0
+margin_top = 33.0
+margin_right = 31.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Carl"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MaskController" type="Control" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 1
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 3 )
+_sections_unfolded = [ "Focus", "Rect" ]
+
+
